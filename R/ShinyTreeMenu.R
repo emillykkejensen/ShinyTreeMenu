@@ -5,7 +5,7 @@
 #' @import htmlwidgets
 #'
 #' @export
-ShinyTreeMenu <- function(tree_data, select_id = NULL, level_icons = "plus", elementId = NULL) {
+ShinyTreeMenu <- function(tree_data, select_id = NULL, level_icons = "plus") {
 
   tree <- treemenu_HTML(tree_data = tree_data,
                         select_id = select_id,
@@ -15,8 +15,7 @@ ShinyTreeMenu <- function(tree_data, select_id = NULL, level_icons = "plus", ele
   htmlwidgets::createWidget(
     name = "ShinyTreeMenu",
     tree,
-    package = "ShinyTreeMenu",
-    elementId = "treemenu"
+    package = "ShinyTreeMenu"
   )
 }
 
