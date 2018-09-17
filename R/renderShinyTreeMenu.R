@@ -66,7 +66,7 @@ renderShinyTreeMenu <- function(input, output, session, treedata, level_icons){
 
     treemenuout <-
       ShinyTreeMenuHTML(
-        tree_data = treedata(),
+        treedata = treedata(),
         level_icons = level_icons)
 
   })

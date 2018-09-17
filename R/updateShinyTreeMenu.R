@@ -18,7 +18,7 @@ updateShinyTreeMenu <- function(treedata, treemenu_open, level_icons){
     shinyjs::html(id = paste0("treemenu_open_", treemenu_open()$openid),
                   html =
                     treemenu_HTML(
-                      tree_data = treedata(),
+                      treedata = treedata(),
                       select_id = treemenu_open()$openid,
                       level_icons = level_icons))
   })
