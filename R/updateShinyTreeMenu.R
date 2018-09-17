@@ -2,21 +2,15 @@
 #'
 #' updateShinyTreeMenu() updates the tree menu, when a new level is selected
 #'
-#'
-#'
 #' @param treedata data.table; treedata - see details for more
-#' @param treemenu_open character; Id belonging to the branch you want to open.
-#' @param level_icons character; Names of fa-icons to use for the tree.
-#' Must be of length 1 or the same length as the number of levels.
+#' @param treemenu_open reactive expression; Id belonging to the branch you want to open.
+#' @param level_icons character; Names of fa-icons to use for the tree - see [ShinyTreeMenuHTML()] for more details.
 #'
 #' @return A HTML class character containing the tree menu
 #'
-#' @examples
+#' @seealso \code{\link{renderShinyTreeMenu}} and \code{\link{ShinyTreeMenuHTML}}
 #'
-#' updateShinyTreeMenu(
-#'    treedata = treedata,
-#'    treemenu_open = reactive({input$treemenu_open}),
-#'    level_icons = "plus")
+#' @inherit renderShinyTreeMenu examples
 #'
 #' @export
 updateShinyTreeMenu <- function(treedata, treemenu_open, level_icons){

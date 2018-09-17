@@ -1,23 +1,18 @@
 #' Render the ShinyTreeMenu HTML
 #'
-#' treemenu() renders the TreeMenu HTML using treedata
+#' Render a reactive ShinyTreeMenu output variable in your Shiny UI.
 #'
-#'
-#'
-#' @param tree_data data.table; treedata - see details for more
-#' @param select_id character; Id belonging to the branch you want to open.
-#' If NULL (default) the function will return the base tree using level 1.
-#' @param level_icons character; Names of fa-icons to use for the tree.
-#' Must be of length 1 or the same length as the number of levels.
-#'
-#' @return A HTML class character containing the tree menu
+#' @param outputId output variable to read the value from
+#' @param class character; Additional CSS classes to add to the div output
 #'
 #' @examples
 #'
+#' ShinyTreeMenuOutput("treemenu")
+#'
 #' @export
-ShinyTreeMenuOutput <- function(id, class = NULL) {
+ShinyTreeMenuOutput <- function(outputId, class = NULL){
 
-  ns <- NS(id)
+  ns <- NS(outputId)
 
   treeclass <- paste("shiny-html-output shinytreemenu", class)
 
