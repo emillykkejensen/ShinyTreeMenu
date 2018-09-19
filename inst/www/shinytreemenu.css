@@ -4,7 +4,6 @@
 	white-space: normal;
 	word-break: break-word;
 	overflow-y: scroll;
-	max-height: calc(100vh);
 	scrollbar-track-color: #ffffff;
 	scrollbar-face-color: #3c8dbc;
 	scrollbar-shadow-color: #3c8dbc;

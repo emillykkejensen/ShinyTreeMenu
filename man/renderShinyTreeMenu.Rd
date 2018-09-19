@@ -26,29 +26,61 @@ Shiny UI Output and this treemenu can then be updated using
 \examples{
 
 
+if (interactive()) {
+
+  shinyApp(
+
+    ui = fluidPage(
+
+      # ShinyTreeMenu uses shinyjs - so remember to include shinyjs in your UI
+      shinyjs::useShinyjs(),
+
+      # As of right now, you manually have to load the shinytreemenu.css file and font-awesome
+      tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "shinytreemenu/shinytreemenu.css")),
+      tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "shared/font-awesome/css/font-awesome.min.css")),
+
+      ShinyTreeMenuOutput("treemenu")
+    ),
+
+    server = function(input, output, session) {
+
+      # Treedata has to be in the form of a reactive expression
+      treedata <- reactive({
+        ShinyTreeMenu::treetestdata
+      })
+
+      # Use the shiny callModule to render the ShinyTreeMenu
+      # Note that you should not include () when adding your reactive treedata
+      shiny::callModule(ShinyTreeMenu::renderShinyTreeMenu,
+                        id = "treemenu",
+                        treedata = treedata,
+                        level_icons = "tree")
+
+      # Here you will update the ShinyTreeMenu
+      # As with the render function, you should not include () when adding your reactive treedata
+      ShinyTreeMenu::updateShinyTreeMenu(
+        treedata = treedata,
+        treemenu_open = reactive({input$treemenu_open}),
+        level_icons = "tree")
 
 
-# Create a reactive expression holding the treedata
-
-treedata <- reactive({
-   ShinyTreeMenu::treetestdata
-})
-
-
-# Wrap the renderShinyTreeMenu function in a shiny callModule
-
-shiny::callModule(ShinyTreeMenu::renderShinyTreeMenu,
-                  id = "treemenu",
-                  treedata = treedata,
-                  level_icons = "tree")
+      # For the purpose of displaying the selection functionality
+      observeEvent(input$treemenu, {
+        showModal(
+          modalDialog(
+            paste("Selected id:", input$treemenu$val,
+                  "| Selected level:", input$treemenu$level,
+                  "| Selected row:", input$treemenu$row)
+          )
+        )
+      })
 
 
-# To update your ShinyTreeMenu on selection use:
+    }
 
-ShinyTreeMenu::updateShinyTreeMenu(
-  treedata = treedata,
-  treemenu_open = reactive({input$treemenu_open}),
-  level_icons = "tree")
+  )
+
+}
 
 
 }

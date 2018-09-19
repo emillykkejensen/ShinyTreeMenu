@@ -48,14 +48,14 @@ For further explanation, see examples.
 # Generate base tree HTML at level 1
 treemenu <-
    ShinyTreeMenuHTML(treedata = treedata,
-                     level_icons = c("tree", "pagelines"))
+                     level_icons = "tree")
 
 
 # Generate branch HTML to level 1, id 3
 branch_3 <-
    ShinyTreeMenuHTML(treedata = treedata,
                      select_id = "3",
-                     level_icons = c("tree", "pagelines"))
+                     level_icons = "tree")
 
 
 #######################################
