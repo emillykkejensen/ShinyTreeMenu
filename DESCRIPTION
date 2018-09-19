@@ -8,6 +8,6 @@ Description: This packages provides a clean tree menu UI unsing only HTML and CS
 License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
-Importet: data.table, shiny, stringr, shinyjs, magrittr, R (>= 2.10)
-Depends: data.table, shiny, stringr, shinyjs, magrittr, R (>= 2.10)
+Importet: data.table, shiny, stringr, shinyjs, magrittr, R (>= 2.10), htmltools
+Depends: data.table, shiny, stringr, shinyjs, magrittr, R (>= 2.10), htmltools
 RoxygenNote: 6.1.0

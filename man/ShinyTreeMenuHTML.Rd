@@ -40,6 +40,7 @@ For further explanation, see examples.
 \examples{
 
 # Use test data from ShinyTreeMenu
+treedata <- ShinyTreeMenu::treetestdata
 
 
 #######################################

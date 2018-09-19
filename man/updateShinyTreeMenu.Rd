@@ -31,10 +31,6 @@ if (interactive()) {
       # ShinyTreeMenu uses shinyjs - so remember to include shinyjs in your UI
       shinyjs::useShinyjs(),
 
-      # As of right now, you manually have to load the shinytreemenu.css file and font-awesome
-      tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "shinytreemenu/shinytreemenu.css")),
-      tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "shared/font-awesome/css/font-awesome.min.css")),
-
       ShinyTreeMenuOutput("treemenu")
     ),
 

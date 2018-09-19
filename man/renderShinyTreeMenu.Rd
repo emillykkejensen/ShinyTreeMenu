@@ -22,6 +22,9 @@ runs within the Shiny \code{\link[shiny]{callModule}} function.
 renderShinyTreeMenu renders the initial treemenu as a reactive
 Shiny UI Output and this treemenu can then be updated using
 \code{\link{updateShinyTreeMenu}}.
+
+\strong{shinyjs}
+To use ShinyTreeMenu in SHiny, you need to load shinyjs::useShinyjs() in your UI.
 }
 \examples{
 
@@ -34,10 +37,6 @@ if (interactive()) {
 
       # ShinyTreeMenu uses shinyjs - so remember to include shinyjs in your UI
       shinyjs::useShinyjs(),
-
-      # As of right now, you manually have to load the shinytreemenu.css file and font-awesome
-      tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "shinytreemenu/shinytreemenu.css")),
-      tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "shared/font-awesome/css/font-awesome.min.css")),
 
       ShinyTreeMenuOutput("treemenu")
     ),

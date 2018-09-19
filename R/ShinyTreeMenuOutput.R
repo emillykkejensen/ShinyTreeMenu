@@ -35,9 +35,24 @@ ShinyTreeMenuOutput <- function(outputId, class = NULL, width = "200px", height 
 
   treeclass <- paste("shiny-html-output shinytreemenu", class)
 
-  div(id = ns("treemenu"), class = treeclass, style = style,
+  ShinyTreeMenuTag <-
+    tags$div(id = ns("treemenu"), class = treeclass, style = style,
       div(class = "overlay", style="text-align: center;", tags$i(class = "fa fa-4x fa-refresh fa-spin"))
   )
+
+  htmltools::htmlDependencies(ShinyTreeMenuTag) <-
+    htmltools::htmlDependency(name = "font-awesome",
+                              version = "4.7.0",
+                              src = c(href = "shared/font-awesome"),
+                              stylesheet = "css/font-awesome.min.css")
+
+  htmltools::htmlDependencies(ShinyTreeMenuTag) <-
+    htmltools::htmlDependency(name = "shinytreemenu",
+                              version = "1",
+                              src = c(href = "shinytreemenu"),
+                              stylesheet = "shinytreemenu.css")
+
+  return(ShinyTreeMenuTag)
 
 }
 

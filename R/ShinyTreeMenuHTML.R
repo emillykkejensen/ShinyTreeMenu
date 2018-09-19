@@ -30,7 +30,7 @@
 #' @examples
 #'
 #' # Use test data from ShinyTreeMenu
-#  treedata <- ShinyTreeMenu::treetestdata
+#' treedata <- ShinyTreeMenu::treetestdata
 #'
 #'
 #' #######################################
@@ -61,7 +61,7 @@ ShinyTreeMenuHTML <- function(treedata, select_id = NULL, level_icons = "plus"){
   library(magrittr)
   library(stringr)
 
-  if(!is.data.table(treedata)) treedata <- as.data.table(treedata)
+  if(!data.table::is.data.table(treedata)) treedata <- data.table::as.data.table(treedata)
 
   if(nrow(treedata) == 0){
 
