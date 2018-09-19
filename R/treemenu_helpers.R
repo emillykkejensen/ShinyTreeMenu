@@ -6,16 +6,16 @@ treemenu_setInputTreeValue <- function(val, level, row){
   }
 }
 
-treemenu_linkBuilder <- function(val, level, row, icon){
+treemenu_linkBuilder <- function(val, level, row, label, icon){
   if(length(val) == 1){
     return(paste0("
   <li class=\"level", level, "\">
     <a href=\"", treemenu_setInputTreeValue(val, level, row), "\">
-      <i class=\"fa fa-", icon, "\" aria-hidden=\"true\"></i> ", val, "
+      <i class=\"fa fa-", icon, "\" aria-hidden=\"true\"></i> ", label, "
     </a>
   </li>"))
   } else {
-    return(sapply(seq(val), function(x) treemenu_linkBuilder(val[x], level, row[x], icon)))
+    return(sapply(seq(val), function(x) treemenu_linkBuilder(val[x], level, row[x], label[x], icon)))
   }
 }
 

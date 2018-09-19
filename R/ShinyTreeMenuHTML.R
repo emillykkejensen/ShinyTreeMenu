@@ -136,6 +136,7 @@ ShinyTreeMenuHTML <- function(treedata, select_id = NULL, level_icons = "plus"){
              html_out := treemenu_linkBuilder(val = this_id,
                                               level = select_level,
                                               row = rowID,
+                                              label = this_name,
                                               icon = level_icons[select_level])]
 
     # If level has childen, then build a new tree for tat level
