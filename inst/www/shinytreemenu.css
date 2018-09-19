@@ -1,0 +1,132 @@
+/* Overall style */
+
+.shinytreemenu {
+	white-space: normal;
+	word-break: break-word;
+	overflow-y: scroll;
+	max-height: calc(100vh - 240px);
+	scrollbar-track-color: #ffffff;
+	scrollbar-face-color: #3c8dbc;
+	scrollbar-shadow-color: #3c8dbc;
+}
+
+
+/* Tree Menu Scrollbar */
+
+.shinytreemenu::-webkit-scrollbar-track {
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+
+.shinytreemenu::-webkit-scrollbar {
+	width: 6px;
+	background-color: #ffffff;
+}
+
+.shinytreemenu::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: #3c8dbc;
+}
+
+
+/* Tree Styling */
+
+ol.tree {
+  padding-left: 25px;
+  margin-bottom: 30px;
+}
+
+ol.tree ol{
+  padding-left: 34px;
+}
+
+ol.tree li{
+  list-style-type:none;
+  color:#333;
+  position:relative;
+  margin-left:-20px;
+}
+
+ol.tree li.level1{
+  margin-top:10px;
+}
+
+
+
+ol.tree li label{
+  cursor:pointer;
+  margin:0;
+  vertical-align: top;
+}
+
+ol.tree li label:before{
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content:"\f067";
+  padding-right:0.5em;
+  margin-left: -20px;
+}
+
+ol.tree li label:before ~ input:checked{
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content:"\f068";
+  padding-right:0.5em;
+}
+
+
+ol.tree li{
+  margin-left:-1px !important;
+}
+
+ol.tree li a{
+  display:inline-block;
+  color:#333 !important;
+  text-decoration:none;
+}
+
+ol.tree li a:hover{
+  color:#555 !important;
+}
+
+ol.tree li input{
+  width:1em;
+  height:1em;
+  position:absolute;
+  left:-0.5em;
+  top:0;
+  opacity:0;
+  cursor:pointer;
+}
+
+ol.tree li input + ol{
+  margin: 0.1em 0 0 0;
+}
+
+
+ol.tree li input + ol > li{
+  display:none;
+  margin-left:-14px !important;
+  padding-left:1px
+}
+
+
+ol.tree li input:checked + ol{
+  height:auto;
+}
+
+ol.tree li input:checked + ol > li{
+  display:block;
+  margin:0 0 0.1em 0;
+}
+
+
+/* Tree Menu Loading */
+ol.tree li.loading {
+    text-align: center;
+    padding-right: 34px;
+}

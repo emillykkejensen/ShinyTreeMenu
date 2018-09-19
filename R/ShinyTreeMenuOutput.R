@@ -12,6 +12,8 @@
 #' @export
 ShinyTreeMenuOutput <- function(outputId, class = NULL){
 
+  # tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "shinytreemenu/shinytreemenu.css"))
+
   ns <- NS(outputId)
 
   treeclass <- paste("shiny-html-output shinytreemenu", class)
