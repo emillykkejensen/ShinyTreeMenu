@@ -56,6 +56,7 @@ ol.tree li label{
   cursor:pointer;
   margin:0;
   vertical-align: top;
+  font-weight: 400;
 }
 
 ol.tree li label:before{
@@ -68,13 +69,8 @@ ol.tree li label:before{
   margin-left: -20px;
 }
 
-ol.tree li label:before ~ input:checked{
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
+ol.tree li label:before input:checked{
   content:"\f068";
-  padding-right:0.5em;
 }
 
 

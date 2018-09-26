@@ -71,7 +71,10 @@ ShinyTreeMenuHTML <- function(treedata, select_id = NULL, level_icons = "plus"){
 
     if(!("rowID" %in% names(treedata))) treedata[, rowID := .I]
 
-    levels <- length(grep("level[0-9]+_id", names(treedata)))
+    level_cols <- grep("level[0-9]+_id", names(treedata))
+    levels <- length(level_cols)
+
+    if(anyDuplicated(treedata, by = level_cols) != 0) stop("Level IDs has to be unique!")
 
     if(length(level_icons) == 1 & levels != 1) level_icons <- rep(level_icons, levels)
     if(length(level_icons) != levels) stop("level_icons must be of length 1 or the same length as the number of levels.")
