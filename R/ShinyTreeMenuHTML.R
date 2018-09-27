@@ -54,12 +54,10 @@
 #'
 #' # To use ShinyTreeMenuHTML() with RStudio Shiny use renderShinyTreeMenu()
 #'
+#' @import data.table magrittr stringr
+#'
 #' @export
 ShinyTreeMenuHTML <- function(treedata, select_id = NULL, level_icons = "plus"){
-
-  library(data.table)
-  library(magrittr)
-  library(stringr)
 
   if(!data.table::is.data.table(treedata)) treedata <- data.table::as.data.table(treedata)
 

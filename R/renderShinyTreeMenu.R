@@ -76,6 +76,7 @@
 #'
 #' }
 #'
+#' @import shiny
 #'
 #' @export
 renderShinyTreeMenu <- function(input, output, session, treedata, level_icons){

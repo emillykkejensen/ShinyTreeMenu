@@ -23,6 +23,8 @@
 #'
 #' @inherit renderShinyTreeMenu examples
 #'
+#' @import shiny htmltools
+#'
 #' @export
 ShinyTreeMenuOutput <- function(outputId, class = NULL, width = "200px", height = "100vh"){
 

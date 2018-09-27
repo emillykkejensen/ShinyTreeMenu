@@ -81,7 +81,6 @@ if (interactive()) {
 
 }
 
-
 }
 \seealso{
 \code{\link{ShinyTreeMenuOutput}}, \code{\link{updateShinyTreeMenu}} and \code{\link{ShinyTreeMenuHTML}}

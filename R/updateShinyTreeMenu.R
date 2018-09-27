@@ -12,6 +12,8 @@
 #'
 #' @inherit renderShinyTreeMenu examples
 #'
+#' @import shiny shinyjs
+#'
 #' @export
 updateShinyTreeMenu <- function(treedata, treemenu_open, level_icons){
   shiny::observeEvent(treemenu_open(), {
