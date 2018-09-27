@@ -2,7 +2,10 @@
 ShinyTreeMenu
 =============
 
-ShinyTreeMenu provides a clean tree menu UI useing only HTML and CSS, with lazy loading making it posible to build enormous tree menus. \#\# Installation
+ShinyTreeMenu provides a clean tree menu UI useing only HTML and CSS, with lazy loading making it posible to build enormous tree menus.
+
+Installation
+------------
 
 You can install ShinyTreeMenu from GitHub with:
 
