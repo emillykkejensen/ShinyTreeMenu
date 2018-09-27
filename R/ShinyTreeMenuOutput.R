@@ -41,10 +41,10 @@ ShinyTreeMenuOutput <- function(outputId, class = NULL, width = "200px", height 
   )
 
   htmltools::htmlDependencies(ShinyTreeMenuTag) <-
-    list(htmltools::htmlDependency(name = "shinytreemenu",
+    list(htmltools::htmlDependency(name = "font-awesome",
                                    version = "4.7.0",
-                                   src = c(href = "shinytreemenu"),
-                                   stylesheet = "font-awesome.min.css"),
+                                   src = c(href = "shared/font-awesome"),
+                                   stylesheet = "css/font-awesome.min.css"),
          htmltools::htmlDependency(name = "shinytreemenu",
                                    version = "1",
                                    src = c(href = "shinytreemenu"),
