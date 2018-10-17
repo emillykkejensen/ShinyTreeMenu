@@ -2,7 +2,7 @@ Package: ShinyTreeMenu
 Type: Package
 Title: A clean HTML tree menu with lazy loading
 Version: 0.1.0
-Author: person("Emil", "Lykke Jensen", email = "emil@emillykkejensen.dk", role = c("aut", "cre"))
+Author: Emil Lykke Jensen <emil@emillykkejensen.dk>
 Maintainer: Emil Lykke Jensen <emil@emillykkejensen.dk>
 Description: This packages provides a clean tree menu UI useing only HTML and CSS, with lazy loading making it posible to build enormous tree menus.
 License: GPL-3 | file LICENSE
