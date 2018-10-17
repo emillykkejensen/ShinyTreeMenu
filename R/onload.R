@@ -1,4 +1,4 @@
-
+#' @import shiny
 .onLoad <- function(...){
 
   shiny::addResourcePath("shinytreemenu", system.file("www", package = "ShinyTreeMenu"))
