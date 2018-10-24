@@ -29,8 +29,8 @@ ShinyTreeMenuOutput <- function(outputId, class = NULL, width = "200px", height 
   ns <- NS(outputId)
 
   style <- c()
-  if(!is.null(width)) style <- c(style, paste0("width=", width, ";"))
-  if(!is.null(height)) style <- c(style, paste0("max-height=", height, ";"))
+  if(!is.null(width)) style <- c(style, paste0("width:", width, ";"))
+  if(!is.null(height)) style <- c(style, paste0("max-height:", height, ";"))
   if(length(style)) style <- paste(style, collapse = " ") else NULL
 
   treeclass <- paste("shiny-html-output shinytreemenu", class)
